@@ -7,9 +7,7 @@ cask "pixelperfect" do
   desc "Increase the text size of iPhone and iPad apps on Mac."
   homepage "https://github.com/cormiertyshawn895/PixelPerfect/"
 
-  container nested: "PixelPerfect/PixelPerfect.app"
-
-  app "PixelPerfect.app"
+  app "Pixel Perfect.app"
 
   zap trash: [
     "~/Library/Caches/com.mac.PixelPerfect",
