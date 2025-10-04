@@ -4,8 +4,10 @@ cask "pixelperfect" do
 
   url "https://github.com/cormiertyshawn895/PixelPerfect/releases/download/#{version}/PixelPerfect.#{version}.zip"
   name "PixelPerfect"
-  desc "ncrease the text size of iPhone and iPad apps on Mac."
+  desc "Increase the text size of iPhone and iPad apps on Mac."
   homepage "https://github.com/cormiertyshawn895/PixelPerfect/"
+
+  container nested: "PixelPerfect/PixelPerfect.app"
 
   app "PixelPerfect.app"
 
