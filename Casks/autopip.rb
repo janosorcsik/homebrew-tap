@@ -1,6 +1,6 @@
 cask "autopip" do
-  version "1.0"
-  sha256 "7fefc8e052643fe5b7dfdaf3ef4c774d7681a495ac2922d726d2f16fc830eb86"
+  version "1.0.1"
+  sha256 "fad064d9837828c819b4b25ef3181a1ad1757a371dd132fa9521f27798899681"
 
   url "https://github.com/vordenken/AutoPiP/releases/download/v#{version}/AutoPiP.dmg"
   name "AutoPiP"
