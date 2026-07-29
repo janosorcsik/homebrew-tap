@@ -9,13 +9,6 @@ class BrewRmtree < Formula
       bin.install "cmd/brew-rmtree.rb"
     end
 
-    def caveats
-        <<~EOS
-          You can uninstall this formula, as `brew tap beeftornado/brew-rmtree` is all that's
-          needed to install Rmtree and keep it up to date.
-        EOS
-      end
-
     test do
       system "brew", "rmtree", "--help"
     end
