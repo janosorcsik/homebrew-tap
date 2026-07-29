@@ -11,6 +11,11 @@ cask "autopip" do
 
   app "AutoPiP.app"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/AutoPiP.app"]
+  end
+
   zap trash: [
     "~/Library/Application Scripts/com.vd.AutoPiP",
     "~/Library/Application Scripts/com.vd.AutoPiP.Extension",

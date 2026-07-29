@@ -11,6 +11,11 @@ cask "vidpreview" do
 
   app "VidPreview.app"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/VidPreview.app"]
+  end
+
   zap trash: [
     "~/Library/Application Scripts/uk.tarun.VidPreview",
     "~/Library/Application Scripts/uk.tarun.VidPreview.VidPreviewQuickLook",

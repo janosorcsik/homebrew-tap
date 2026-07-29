@@ -11,6 +11,11 @@ cask "airbattery" do
 
   app "AirBattery.app"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/AirBattery.app"]
+  end
+
   zap trash: [
     "~/Library/Application Scripts/com.lihaoyun6.AirBattery.widget",
     "~/Library/Application Scripts/com.lihaoyun6.AirBatteryHelper",

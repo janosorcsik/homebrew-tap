@@ -16,14 +16,6 @@ cask "quicknfo" do
                    args: ["-cr", "#{appdir}/QuickNFO.app"]
   end
 
-  caveats <<~EOS
-    QuickNFO is not signed with an Apple Developer ID.
-    If you did not use --no-quarantine during install, run:
-      xattr -cr /Applications/QuickNFO.app
-    Then launch QuickNFO.app once to register the QuickLook extensions.
-    After that, select any .nfo file in Finder and press Space to preview.
-  EOS
-
   zap trash: [
     "~/Library/Application Scripts/org.planbnet.quicknfo",
     "~/Library/Application Scripts/org.planbnet.quicknfo.thumbnail",
