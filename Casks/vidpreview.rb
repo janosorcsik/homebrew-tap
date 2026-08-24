@@ -17,11 +17,7 @@ cask "vidpreview" do
   end
 
   zap trash: [
-    "~/Library/Application Scripts/uk.tarun.VidPreview",
-    "~/Library/Application Scripts/uk.tarun.VidPreview.VidPreviewQuickLook",
-    "~/Library/Application Scripts/uk.tarun.VidPreview.VidPreviewThumbnail",
-    "~/Library/Containers/uk.tarun.VidPreview",
-    "~/Library/Containers/uk.tarun.VidPreview.VidPreviewQuickLook",
-    "~/Library/Containers/uk.tarun.VidPreview.VidPreviewThumbnail",
+    "~/Library/Application Scripts/uk.tarun.VidPreview*",
+    "~/Library/Containers/uk.tarun.VidPreview*",
   ]
 end

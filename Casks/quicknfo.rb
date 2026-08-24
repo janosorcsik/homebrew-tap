@@ -17,11 +17,7 @@ cask "quicknfo" do
   end
 
   zap trash: [
-    "~/Library/Application Scripts/org.planbnet.quicknfo",
-    "~/Library/Application Scripts/org.planbnet.quicknfo.thumbnail",
-    "~/Library/Application Scripts/org.planbnet.quicknfo.preview",
-    "~/Library/Containers/org.planbnet.quicknfo",
-    "~/Library/Containers/org.planbnet.quicknfo.thumbnail",
-    "~/Library/Containers/org.planbnet.quicknfo.preview",
+    "~/Library/Application Scripts/org.planbnet.quicknfo*",
+    "~/Library/Containers/org.planbnet.quicknfo*",
   ]
 end

@@ -17,9 +17,8 @@ cask "autopip" do
   end
 
   zap trash: [
-    "~/Library/Application Scripts/com.vd.AutoPiP",
-    "~/Library/Application Scripts/com.vd.AutoPiP.Extension",
-    "~/Library/Containers/com.vd.AutoPiP",
-    "~/Library/Containers/com.vd.AutoPiP.Extension",
+    "~/Library/Application Scripts/com.vd.AutoPiP*",
+    "~/Library/Containers/com.vd.AutoPiP*",
+    "~/Library/Preferences/com.vd.AutoPiP.plist",
   ]
 end

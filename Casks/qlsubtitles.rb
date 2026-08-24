@@ -19,9 +19,7 @@ cask "qlsubtitles" do
   end
 
   zap trash: [
-    "~/Library/Application Scripts/com.github.riccoyu.QLSubtitles",
-    "~/Library/Application Scripts/com.github.riccoyu.QLSubtitles.PreviewSubtitles",
-    "~/Library/Containers/com.github.riccoyu.QLSubtitles",
-    "~/Library/Containers/com.github.riccoyu.QLSubtitles.PreviewSubtitles",
+    "~/Library/Application Scripts/com.github.riccoyu.QLSubtitles*",
+    "~/Library/Containers/com.github.riccoyu.QLSubtitles*",
   ]
 end
