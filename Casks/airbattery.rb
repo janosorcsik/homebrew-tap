@@ -11,7 +11,7 @@ cask "airbattery" do
 
   app "AirBattery.app"
 
-  postflight do
+  postflight_steps do
     system_command "/usr/bin/xattr",
                    args: ["-cr", "#{appdir}/AirBattery.app"]
   end

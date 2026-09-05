@@ -9,7 +9,7 @@ cask "pixelperfect" do
 
   app "Pixel Perfect.app"
 
-  postflight do
+  postflight_steps do
     system_command "/usr/bin/xattr",
                    args: ["-cr", "#{appdir}/Pixel Perfect.app"]
   end

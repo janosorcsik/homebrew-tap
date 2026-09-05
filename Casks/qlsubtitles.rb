@@ -13,7 +13,7 @@ cask "qlsubtitles" do
 
   app "Quick Look Subtitles.app"
 
-  postflight do
+  postflight_steps do
     system_command "/usr/bin/xattr",
                    args: ["-cr", "#{appdir}/Quick Look Subtitles.app"]
   end

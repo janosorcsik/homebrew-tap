@@ -11,7 +11,7 @@ cask "autopip" do
 
   app "AutoPiP.app"
 
-  postflight do
+  postflight_steps do
     system_command "/usr/bin/xattr",
                    args: ["-cr", "#{appdir}/AutoPiP.app"]
   end

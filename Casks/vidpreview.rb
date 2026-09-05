@@ -11,7 +11,7 @@ cask "vidpreview" do
 
   app "VidPreview.app"
 
-  postflight do
+  postflight_steps do
     system_command "/usr/bin/xattr",
                    args: ["-cr", "#{appdir}/VidPreview.app"]
   end
