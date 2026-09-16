@@ -7,12 +7,9 @@ cask "pixelperfect" do
   desc "Increase the text size of iPhone and iPad apps"
   homepage "https://github.com/cormiertyshawn895/PixelPerfect/"
 
-  app "Pixel Perfect.app"
+  depends_on macos: :big_sur
 
-  postflight_steps do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/Pixel Perfect.app"]
-  end
+  app "Pixel Perfect.app"
 
   zap trash: [
     "~/Library/Caches/com.mac.PixelPerfect",

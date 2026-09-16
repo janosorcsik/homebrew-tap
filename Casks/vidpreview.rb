@@ -7,14 +7,9 @@ cask "vidpreview" do
   desc "QuickLook extension for native video preview"
   homepage "https://github.com/ptaru/VidPreview"
 
-  depends_on macos: :sequoia
+  depends_on macos: :sonoma
 
   app "VidPreview.app"
-
-  postflight_steps do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/VidPreview.app"]
-  end
 
   zap trash: [
     "~/Library/Application Scripts/uk.tarun.VidPreview*",

@@ -7,14 +7,10 @@ cask "quicknfo" do
   desc "QuickLook preview extension for NFO files"
   homepage "https://github.com/vigo/QuickNFO"
 
+  depends_on arch: :arm64
   depends_on macos: :sequoia
 
   app "QuickNFO.app"
-
-  postflight_steps do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/QuickNFO.app"]
-  end
 
   zap trash: [
     "~/Library/Application Scripts/org.planbnet.quicknfo*",

@@ -1,15 +1,19 @@
-class Nightlight < Formula
-  desc "A CLI for configuring 'Night Shift' on macOS 🌕🌖🌗🌘🌑"
-  homepage "https://github.com/smudge/nightlight"
-  url "https://github.com/smudge/nightlight/archive/v1.0.0.tar.gz"
-  version "1.0.0"
-  sha256 "db7f24f56146dcd611836c8bce16067489e53e1de749ae4426177c8cb1b11398"
+# typed: strict
+# frozen_string_literal: true
 
-  depends_on "rust" => :build
+# Formula for nightlight, a CLI for macOS Night Shift configuration.
+class Nightlight < Formula
+  desc "CLI for configuring 'Night Shift' on macOS"
+  homepage "https://github.com/smudge/nightlight"
+  url "https://github.com/smudge/nightlight/releases/download/v#{version}/nightlight.arm64"
+  version "1.0.0"
+  sha256 "3ed2082d2a3c4fb76be4380e3c4870f8106bcec3ce06bf27d3b94fa1fb8e2057"
+
+  depends_on arch: :arm64
+  depends_on macos: :big_sur
 
   def install
-    system "cargo", "build", "--release", "--bin", "nightlight"
-    bin.install "target/release/nightlight"
+    bin.install "nightlight.arm64" => "nightlight"
   end
 
   test do

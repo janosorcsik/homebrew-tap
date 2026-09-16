@@ -4,17 +4,12 @@ cask "airbattery" do
 
   url "https://github.com/lihaoyun6/AirBattery/releases/download/#{version}/AirBattery_v#{version}.dmg"
   name "AirBattery"
-  desc "Get the battery level of all your devices on your Mac."
+  desc "Get the battery level of all your devices"
   homepage "https://github.com/lihaoyun6/AirBattery"
 
   depends_on macos: :big_sur
 
   app "AirBattery.app"
-
-  postflight_steps do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/AirBattery.app"]
-  end
 
   zap trash: [
     "~/Library/Application Scripts/com.lihaoyun6.AirBattery.widget",

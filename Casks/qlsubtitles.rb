@@ -13,11 +13,6 @@ cask "qlsubtitles" do
 
   app "Quick Look Subtitles.app"
 
-  postflight_steps do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/Quick Look Subtitles.app"]
-  end
-
   zap trash: [
     "~/Library/Application Scripts/com.github.riccoyu.QLSubtitles*",
     "~/Library/Containers/com.github.riccoyu.QLSubtitles*",

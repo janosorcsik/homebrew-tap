@@ -11,14 +11,9 @@ cask "flux-markdown" do
 
   app "FluxMarkdown.app"
 
-  postflight_steps do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/FluxMarkdown.app"]
-  end
-
   zap trash: [
     "~/Library/Application Scripts/com.xykong.Markdown.QuickLook",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.xykong.markdown.sfl4",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.xykong.markdown.sfl*",
     "~/Library/Application Support/FluxMarkdown",
     "~/Library/Caches/com.xykong.Markdown",
     "~/Library/Containers/com.xykong.Markdown.QuickLook",

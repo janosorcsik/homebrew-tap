@@ -7,14 +7,10 @@ cask "autopip" do
   desc "Picture-in-Picture mode when switching tab in Safari"
   homepage "https://github.com/vordenken/AutoPiP/"
 
+  depends_on arch: :arm64
   depends_on macos: :ventura
 
   app "AutoPiP.app"
-
-  postflight_steps do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/AutoPiP.app"]
-  end
 
   zap trash: [
     "~/Library/Application Scripts/com.vd.AutoPiP*",
